@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
     const paraTwo = document.querySelector('#msg_2')
     paraOne.textContent = 'Loading...'
     paraTwo.textContent = ''    
-    fetch(`http://localhost:3000/weather?address=${search.value}`).then((response) => {
+    fetch(`/weather?address=${search.value}`).then((response) => {
         if (response.status === 200) {
             return response.json()
         } else {
